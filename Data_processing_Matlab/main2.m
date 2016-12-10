@@ -44,7 +44,7 @@ size(XTest)
 size(YTest)
 
 fid=fopen('XTrainPrint.txt','a+');
-for i=1:1000
+for i=1:450
     for j=1:4096
         fprintf(fid,'%1.0f\t',XTrainPrint(i,j));
     end
@@ -54,8 +54,8 @@ fclose(fid);
 
 
 fid=fopen('YTrainPrint.txt','a+');
-for i=1:1000
-    for j=1:10
+for i=1:450
+    for j=1:30
         fprintf(fid,'%1.0f\t',YTrainPrint(i,j));
     end
   fprintf(fid,'\r\n');
@@ -63,20 +63,20 @@ end
 fclose(fid);
 
 
-fid=fopen('XTestPrint.txt','a+');
-for i=1:100
-    for j=1:4096
-        fprintf(fid,'%1.0f\t',XTestPrint(i,j));
-    end
-  fprintf(fid,'\r\n');
-end
-fclose(fid);
-
-fid=fopen('YTestPrint.txt','a+');
-for i=1:100
-    for j=1:10
-        fprintf(fid,'%1.0f\t',YTestPrint(i,j));
-    end
-  fprintf(fid,'\r\n');
-end
-fclose(fid);
+% fid=fopen('XTestPrint.txt','a+');
+% for i=1:100
+%     for j=1:4096
+%         fprintf(fid,'%1.0f\t',XTestPrint(i,j));
+%     end
+%   fprintf(fid,'\r\n');
+% end
+% fclose(fid);
+% 
+% fid=fopen('YTestPrint.txt','a+');
+% for i=1:100
+%     for j=1:10
+%         fprintf(fid,'%1.0f\t',YTestPrint(i,j));
+%     end
+%   fprintf(fid,'\r\n');
+% end
+% fclose(fid);

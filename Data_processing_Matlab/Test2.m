@@ -1,11 +1,11 @@
 function out =Test2(n,j)
 % nth character? jth type
-str1 = num2str(j,'%.3d');
+str1 = num2str(j);
 str2 =num2str(n);
-str=['dataset/type',str1,'/','n','.png']; 
+str=['./Printed characters/type',str1,'/',str2,'.png']; 
 
-file = fopen(str,'r');
-out = imread('1.jpg');
+%file = fopen(str,'r');
+out = imread(str);
 out=rgb2gray(out);
 out = im2bw(out);
 out = ReSize(out);
