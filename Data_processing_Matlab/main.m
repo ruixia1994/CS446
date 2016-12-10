@@ -1,20 +1,20 @@
 % selectData=[1,2,3,4,5];
 XTrain=zeros(30,64*64);
-YTrain=zeros(30,10); 
+YTrain=zeros(30,30); 
 
 XTest=zeros(10,64*64);
-YTest=zeros(10,10); 
-% selectData= zeros(10);
-% for j=1:10
-%     selectData(j)=1 + 9*rand();
-% end
+YTest=zeros(10,30); 
 
-selectData=[1,2,3,4,5,6,7,8,9,10];
+%selectData= zeros(10);
+selectData = randi(500,1,30);
+
+
+%selectData=[1,2,3,4,5,6,7,8,9,10];
 
 count=1;
-for i=1:10
-    for j=1:100
-        b=zeros(1,10);
+for i=1:30
+    for j=1:500
+        b=zeros(1,30);
         n = selectData(i);
         m = Test(i,j); 
         m = reshape(m,64*64,1);
@@ -31,9 +31,9 @@ size(YTrain)
 
 
 count=1;
-for i=1:10
-    for j=101:110
-        b=zeros(1,10);
+for i=1:30
+    for j=501:700
+        b=zeros(1,30);
         n = selectData(i);
         m = Test(i,j); 
         m = reshape(m,64*64,1);
